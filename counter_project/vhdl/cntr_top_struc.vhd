@@ -1,13 +1,13 @@
 -------------------------------------------------------------------------------
--- MEL Counter Project - Top Level Structural Architecture                  --
+-- MEL Counter Project - Top Level Structural Architecture                   --
 --                                                                           --
 -- Description: Structural implementation connecting IO control and          --
---              counter units. Maps control signals from switches           --
---              to counter inputs according to specification.               --
+--              counter units. Maps control signals from switches            --
+--              to counter inputs according to specification.                --
 --                                                                           --
--- Author : Summer Paulus, Matthias Brinskelle                              --
--- Date : 18.06.2025                                                        --
--- File : cntr_top_struc.vhd                                               --
+-- Author : Summer Paulus, Matthias Brinskelle                               --
+-- Date : 18.06.2025                                                         --
+-- File : cntr_top_struc.vhd                                                 --
 -------------------------------------------------------------------------------
 
 LIBRARY IEEE;

@@ -1,18 +1,18 @@
 -------------------------------------------------------------------------------
--- MEL Counter Project - IO Control Unit Configuration                      --
+-- MEL Counter Project - IO Control Unit Configuration                       --
 --                                                                           --
--- Description: Configuration file binding the io_ctrl entity to its        --
---              RTL architecture implementation.                            --
+-- Description: Configuration file binding the io_ctrl entity to its         --
+--              RTL architecture implementation.                             --
 --                                                                           --
--- Author : Summer Paulus, Matthias Brinskelle                              --
--- Date : 18.06.2025                                                        --
--- File : io_ctrl_rtl_cfg.vhd                                              --
+-- Author : Summer Paulus, Matthias Brinskelle                               --
+-- Date : 18.06.2025                                                         --
+-- File : io_ctrl_rtl_cfg.vhd                                                --
 -------------------------------------------------------------------------------
 
-library IEEE;
-use IEEE.std_logic_1164.all;
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
 
-configuration io_ctrl_rtl_cfg of io_ctrl is
-  for rtl
-  end for;
-end io_ctrl_rtl_cfg;
+CONFIGURATION io_ctrl_rtl_cfg OF io_ctrl IS
+  FOR rtl
+  END FOR;
+END io_ctrl_rtl_cfg;

@@ -1,13 +1,13 @@
 -------------------------------------------------------------------------------
--- MEL Counter Project - IO Control Unit RTL Architecture                   --
+-- MEL Counter Project - IO Control Unit RTL Architecture                    --
 --                                                                           --
--- Description: RTL implementation of the IO control unit including         --
---              switch debouncing, 7-segment display multiplexing,          --
---              and LED control with 1 kHz refresh rate.                    --
+-- Description: RTL implementation of the IO control unit including          --
+--              switch debouncing, 7-segment display multiplexing,           --
+--              and LED control.                                             --
 --                                                                           --
--- Author : Summer Paulus, Matthias Brinskelle                              --
--- Date : 18.06.2025                                                        --
--- File : io_ctrl_rtl.vhd                                                   --
+-- Author : Summer Paulus, Matthias Brinskelle                               --
+-- Date : 18.06.2025                                                         --
+-- File : io_ctrl_rtl.vhd                                                    --
 -------------------------------------------------------------------------------
 
 LIBRARY IEEE;

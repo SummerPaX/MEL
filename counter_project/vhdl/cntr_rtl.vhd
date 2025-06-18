@@ -1,13 +1,13 @@
 -------------------------------------------------------------------------------
--- MEL Counter Project - Counter Unit RTL Architecture                      --
+-- MEL Counter Project - Counter Unit RTL Architecture                       --
 --                                                                           --
--- Description: RTL implementation of 4-digit octal counter with 1 Hz       --
---              counting frequency. Supports up/down counting with          --
---              wraparound and priority control scheme.                     --
+-- Description: RTL implementation of 4-digit octal counter with 1 Hz        --
+--              counting frequency. Supports up/down counting with           --
+--              wraparound and priority control scheme.                      --
 --                                                                           --
--- Author : Summer Paulus, Matthias Brinskelle                              --
--- Date : 18.06.2025                                                        --
--- File : cntr_rtl.vhd                                                      --
+-- Author : Summer Paulus, Matthias Brinskelle                               --
+-- Date : 18.06.2025                                                         --
+-- File : cntr_rtl.vhd                                                       --
 -------------------------------------------------------------------------------
 
 LIBRARY IEEE;

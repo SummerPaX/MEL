@@ -1,29 +1,29 @@
 -------------------------------------------------------------------------------
--- MEL Counter Project - Top Level Entity                                   --
+-- MEL Counter Project - Top Level Entity                                    --
 --                                                                           --
--- Description: This is the top-level entity declaration for the MEL        --
---              counter project. Connects to all FPGA I/O pins and          --
---              integrates IO control and counter units.                    --
+-- Description: This is the top-level entity declaration.                    --
+--              Connects to all FPGA I/O pins and                            --
+--              integrates IO control and counter units.                     --
 --                                                                           --
--- Author : Summer Paulus, Matthias Brinskelle                              --
--- Date : 18.06.2025                                                        --
--- File : cntr_top_.vhd                                                     --
+-- Author : Summer Paulus, Matthias Brinskelle                               --
+-- Date : 18.06.2025                                                         --
+-- File : cntr_top_.vhd                                                      --
 -------------------------------------------------------------------------------
 
-library IEEE;
-use IEEE.std_logic_1164.all;
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
 
-entity cntr_top is
-  port (
+ENTITY cntr_top IS
+  PORT (
     -- Clock and Reset
-    clk_i          : in  std_logic;                    -- System clock (100 MHz)
-    reset_i        : in  std_logic;                    -- Asynchronous high active reset
-    
+    clk_i : IN STD_LOGIC; -- System clock (100 MHz)
+    reset_i : IN STD_LOGIC; -- Asynchronous high active reset
+
     -- External FPGA board I/O
-    sw_i           : in  std_logic_vector(15 downto 0); -- 16 switches
-    pb_i           : in  std_logic_vector(3 downto 0);  -- 4 push buttons
-    ss_o           : out std_logic_vector(7 downto 0);  -- 7-segment display segments
-    ss_sel_o       : out std_logic_vector(3 downto 0);  -- 7-segment display selection
-    led_o          : out std_logic_vector(15 downto 0)  -- 16 LEDs
+    sw_i : IN STD_LOGIC_VECTOR(15 DOWNTO 0); -- 16 switches
+    pb_i : IN STD_LOGIC_VECTOR(3 DOWNTO 0); -- 4 push buttons
+    ss_o : OUT STD_LOGIC_VECTOR(7 DOWNTO 0); -- 7-segment display segments
+    ss_sel_o : OUT STD_LOGIC_VECTOR(3 DOWNTO 0); -- 7-segment display selection
+    led_o : OUT STD_LOGIC_VECTOR(15 DOWNTO 0) -- 16 LEDs
   );
-end cntr_top;
+END cntr_top;

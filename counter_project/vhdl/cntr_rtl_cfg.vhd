@@ -1,18 +1,18 @@
 -------------------------------------------------------------------------------
--- MEL Counter Project - Counter Unit Configuration                         --
+-- MEL Counter Project - Counter Unit Configuration                          --
 --                                                                           --
--- Description: Configuration file binding the cntr entity to its           --
---              RTL architecture implementation.                            --
+-- Description: Configuration file binding the cntr entity to its            --
+--              RTL architecture implementation.                             --
 --                                                                           --
--- Author : Summer Paulus, Matthias Brinskelle                              --
--- Date : 18.06.2025                                                        --
--- File : cntr_rtl_cfg.vhd                                                 --
+-- Author : Summer Paulus, Matthias Brinskelle                               --
+-- Date : 18.06.2025                                                         --
+-- File : cntr_rtl_cfg.vhd                                                   --
 -------------------------------------------------------------------------------
 
-library IEEE;
-use IEEE.std_logic_1164.all;
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
 
-configuration cntr_rtl_cfg of cntr is
-  for rtl
-  end for;
-end cntr_rtl_cfg;
+CONFIGURATION cntr_rtl_cfg OF cntr IS
+  FOR rtl
+  END FOR;
+END cntr_rtl_cfg;

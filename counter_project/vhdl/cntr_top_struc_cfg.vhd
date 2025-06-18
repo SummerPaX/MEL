@@ -9,16 +9,16 @@
 -- File : cntr_top_struc_cfg.vhd                                           --
 -------------------------------------------------------------------------------
 
-library IEEE;
-use IEEE.std_logic_1164.all;
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
 
-configuration cntr_top_struc_cfg of cntr_top is
-  for struc
-    for i_io_ctrl: io_ctrl
-      use configuration work.io_ctrl_rtl_cfg;
-    end for;
-    for i_cntr: cntr
-      use configuration work.cntr_rtl_cfg;
-    end for;
-  end for;
-end cntr_top_struc_cfg;
+CONFIGURATION cntr_top_struc_cfg OF cntr_top IS
+  FOR struc
+    FOR i_io_ctrl : io_ctrl
+      USE CONFIGURATION work.io_ctrl_rtl_cfg;
+    END FOR;
+    FOR i_cntr : cntr
+      USE CONFIGURATION work.cntr_rtl_cfg;
+    END FOR;
+  END FOR;
+END cntr_top_struc_cfg;
