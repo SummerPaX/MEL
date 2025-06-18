@@ -1,39 +1,12 @@
 -------------------------------------------------------------------------------
---                                                                      
---                        Fulladder VHDL Class Example
---  
--------------------------------------------------------------------------------
---                                                                    
--- ENTITY:         tb_fulladder
---
--- FILENAME:       tb_fulladder_.vhd
--- 
--- ARCHITECTURE:   sim
--- 
--- ENGINEER:       Roland Höller
---
--- DATE:           30. June 2000
---
--- VERSION:        1.0
---
--------------------------------------------------------------------------------
---                                                                      
--- DESCRIPTION:    This is the entity declaration of the fulladder testbench
---                 for the fulladder VHDL class example.
---
---
--------------------------------------------------------------------------------
---
--- REFERENCES:     (none)
---
--------------------------------------------------------------------------------
---                                                                      
--- PACKAGES:       std_logic_1164 (IEEE library)
---
--------------------------------------------------------------------------------
---                                                                      
--- CHANGES:        Version 2.0 - RH - 30 June 2000
---
+-- VHDL Class Example Fulladder, Design                                      --
+--                                                                           --
+-- Description: This is the entity declaration of the fulladder testbench    --
+--              for the fulladder VHDL class example.                        --
+--                                                                           --
+-- Author : Paulus Summer, Matthias Brinskelle                               --
+-- Date : 18.06.2025                                                         --
+-- File : tb_fulladder_.vhd                                                  --
 -------------------------------------------------------------------------------
 
 library IEEE;

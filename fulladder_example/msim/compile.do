@@ -1,8 +1,13 @@
-#####################################################################
-# ModelSim do file, compiles design & testbench of Fulladder example
-# Date: 2025-03-08
-# Author: P. Roessler
-#####################################################################
+###############################################################################
+# ModelSim Script - Fulladder Class Example, Compilation                      #
+#                                                                             #
+# Description: ModelSim do file, compiles design & testbench of Fulladder     #
+#              example                                                        #
+#                                                                             #
+# Author : Paulus Summer, Matthias Brinskelle                                 #
+# Date : 18.06.2025                                                           #
+# File : compile.do                                                           #
+###############################################################################
 
 # compile design files of Fulladder class example
 vcom ../vhdl/halfadder_.vhd

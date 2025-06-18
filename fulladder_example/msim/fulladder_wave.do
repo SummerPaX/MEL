@@ -1,9 +1,13 @@
-#################################################################
-# ModelSim do file, defines signals to display in simulation
-#                   of Fulladder example 
-# Date: 2025-03-08
-# Author: P. Roessler
-#################################################################
+###############################################################################
+# ModelSim Script - Fulladder Class Example, Wave Configuration               #
+#                                                                             #
+# Description: ModelSim do file, defines signals to display in simulation     #
+#              of Fulladder example                                           #
+#                                                                             #
+# Author : Paulus Summer, Matthias Brinskelle                                 #
+# Date : 18.06.2025                                                           #
+# File : fulladder_wave.do                                                    #
+###############################################################################
 
 onerror {resume}
 add wave -noupdate -format logic /tb_fulladder/a_i

@@ -1,39 +1,12 @@
 -------------------------------------------------------------------------------
---                                                                      
---                        Fulladder VHDL Class Example
---  
--------------------------------------------------------------------------------
---                                                                      
--- ENTITY:         orgate
---
--- FILENAME:       orgate_rtl.vhd
--- 
--- ARCHITECTURE:   rtl
--- 
--- ENGINEER:       Roland Höller
---
--- DATE:           30. June 2000
---
--- VERSION:        1.0
---
--------------------------------------------------------------------------------
---                                                                      
--- DESCRIPTION:    This is the architecture rtl of the orgate submodule
---                 of the fulladder VHDL class example.
---
---
--------------------------------------------------------------------------------
---
--- REFERENCES:     (none)
---
--------------------------------------------------------------------------------
---                                                                      
--- PACKAGES:       std_logic_1164 (IEEE library)
---
--------------------------------------------------------------------------------
---                                                                      
--- CHANGES:        Version 2.0 - RH - 30 June 2000
---
+-- VHDL Class Example Fulladder, Design                                      --
+--                                                                           --
+-- Description: This is the architecture rtl of the orgate submodule         --
+--              of the fulladder VHDL class example.                         --
+--                                                                           --
+-- Author : Paulus Summer, Matthias Brinskelle                               --
+-- Date : 18.06.2025                                                         --
+-- File : orgate_rtl.vhd                                                     --
 -------------------------------------------------------------------------------
 
 library IEEE;
