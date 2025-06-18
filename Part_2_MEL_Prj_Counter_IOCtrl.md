@@ -1,5 +1,7 @@
 # Lecture Notes
+
 ## Specification of Counter Project
+
 ### Part 2: IO Control Unit
 
 **Version:** BELN1.0
@@ -245,13 +247,13 @@ end rtl;
 
 The next steps in the project are as follows:
 
-*   Write a VHDL entity for the IO control unit (see the previously described code skeleton), name the file, for example, “io_ctrl_.vhd” and store it in the “vhdl” sub-folder of your project directory. The entity ports can be found in the specification document “Overview of Counter Project”. Have a look at the block diagram (which is included in the specification document “Part 4: Top-Level Design”) to understand, how the IO control unit communicates with other logic in the design.
-*   Write a VHDL architecture for the IO control unit (see the previously described code skeleton), name the file, for example, “io_ctrl_rtl.vhd” and store it in the “vhdl” sub-folder of your project directory. Break down the functionality into smaller sub-blocks or VHDL processes (generation of 1 kHz signal, buttons & switches debouncing, display controller for the 7-segment display ... ) and decide which of these blocks need to be coded as combinatorial logic and which of them need storage elements (registers). You can also create VHDL sub-components for certain pieces of functionality but since the complexity of the IO control unit is not that high, it is rather recommended that you include everything that is described in this document in a single architecture.
-*   You can also create a VHDL configuration if you like to, but this is completely optional.
-*   Create a VHDL entity/architecture pair (and an optional configuration) for the testbench of the IO control unit, name the files, for example, “tb_io_ctrl_.vhd” and “tb_io_ctrl_sim.vhd” and store them in the “tb” sub-folder of your project directory.
-*   Write “do-“scripts to compile and simulate the IO control unit as described in the specification document “Introduction to ModelSim-Intel FPGA Starter Edition” and store them in the “msim” sub-folder of your project directory.
-*   Simulate the IO control unit using ModelSim and fix all bugs that you find.
-*   If the IO control unit was tested successfully, proceed with the specification document “Part 3: Counter Unit”.
+* Write a VHDL entity for the IO control unit (see the previously described code skeleton), name the file, for example, “io_ctrl_.vhd” and store it in the “vhdl” sub-folder of your project directory. The entity ports can be found in the specification document “Overview of Counter Project”. Have a look at the block diagram (which is included in the specification document “Part 4: Top-Level Design”) to understand, how the IO control unit communicates with other logic in the design.
+* Write a VHDL architecture for the IO control unit (see the previously described code skeleton), name the file, for example, “io_ctrl_rtl.vhd” and store it in the “vhdl” sub-folder of your project directory. Break down the functionality into smaller sub-blocks or VHDL processes (generation of 1 kHz signal, buttons & switches debouncing, display controller for the 7-segment display ... ) and decide which of these blocks need to be coded as combinatorial logic and which of them need storage elements (registers). You can also create VHDL sub-components for certain pieces of functionality but since the complexity of the IO control unit is not that high, it is rather recommended that you include everything that is described in this document in a single architecture.
+* You can also create a VHDL configuration if you like to, but this is completely optional.
+* Create a VHDL entity/architecture pair (and an optional configuration) for the testbench of the IO control unit, name the files, for example, “tb_io_ctrl_.vhd” and “tb_io_ctrl_sim.vhd” and store them in the “tb” sub-folder of your project directory.
+* Write “do-“scripts to compile and simulate the IO control unit as described in the specification document “Introduction to ModelSim-Intel FPGA Starter Edition” and store them in the “msim” sub-folder of your project directory.
+* Simulate the IO control unit using ModelSim and fix all bugs that you find.
+* If the IO control unit was tested successfully, proceed with the specification document “Part 3: Counter Unit”.
 
 ---
 

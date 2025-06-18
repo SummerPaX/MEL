@@ -44,10 +44,11 @@ Finally, the counter values shown at the signals `cntr_o(N:0)` have to be conver
 ## How to Proceed?
 
 The next steps in the project are as follows:
-*   Write a VHDL entity for the counter unit, name the file, for example, “cntr_.vhd” and store it in the “vhdl” sub-folder of your project directory. The entity ports can be found in the specification document “Overview of Counter Project”. Have a look at the block diagram (which is included in the document “Part 4: Top-Level Design”) to understand, how the counter unit communicates with other units in the design.
-*   Write a VHDL architecture for the counter unit, name the file, for example, “cntr_rtl.vhd” and store it in the “vhdl” sub-folder of your project directory. Break down the functionality into smaller sub-blocks and decide which of these blocks need to be coded as combinatorial logic and which of them need storage elements (registers). You can also create VHDL sub-components for certain pieces of functionality but since the complexity of the counter unit is not that high, it is rather recommended that you include everything that is described in this document in a single architecture.
-*   You can also create a VHDL configuration if you like to, but this is completely optional.
-*   Create a VHDL entity/architecture pair (and an optional configuration) for the testbench of the counter unit, name the files, for example, “tb_cntr_.vhd” and “tb_cntr_sim.vhd” and store them in the “tb” sub-folder of your project directory.
-*   Write “do-“scripts to compile and simulate the counter unit as described in the distance learning letter “Introduction to ModelSim-Intel FPGA Starter Edition” and store them in the “msim” sub-folder of your project directory.
-*   Simulate the counter unit using ModelSim and fix all bugs that you find.
-*   If the counter unit was tested successfully, proceed with the distance learning letter “Part 4: Top-Level Design”.
+
+* Write a VHDL entity for the counter unit, name the file, for example, “cntr_.vhd” and store it in the “vhdl” sub-folder of your project directory. The entity ports can be found in the specification document “Overview of Counter Project”. Have a look at the block diagram (which is included in the document “Part 4: Top-Level Design”) to understand, how the counter unit communicates with other units in the design.
+* Write a VHDL architecture for the counter unit, name the file, for example, “cntr_rtl.vhd” and store it in the “vhdl” sub-folder of your project directory. Break down the functionality into smaller sub-blocks and decide which of these blocks need to be coded as combinatorial logic and which of them need storage elements (registers). You can also create VHDL sub-components for certain pieces of functionality but since the complexity of the counter unit is not that high, it is rather recommended that you include everything that is described in this document in a single architecture.
+* You can also create a VHDL configuration if you like to, but this is completely optional.
+* Create a VHDL entity/architecture pair (and an optional configuration) for the testbench of the counter unit, name the files, for example, “tb_cntr_.vhd” and “tb_cntr_sim.vhd” and store them in the “tb” sub-folder of your project directory.
+* Write “do-“scripts to compile and simulate the counter unit as described in the distance learning letter “Introduction to ModelSim-Intel FPGA Starter Edition” and store them in the “msim” sub-folder of your project directory.
+* Simulate the counter unit using ModelSim and fix all bugs that you find.
+* If the counter unit was tested successfully, proceed with the distance learning letter “Part 4: Top-Level Design”.

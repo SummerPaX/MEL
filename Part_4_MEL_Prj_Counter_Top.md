@@ -50,10 +50,10 @@ Figure 2 illustrates the principle of the top-level testbench.
 
 The next steps in the project are as follows:
 
-*   Write a VHDL entity for the top-level design, name the file, for example, “cntr_top_.vhd” and store it in the “vhdl” sub-folder of your project directory. The entity ports can be found in the distance learning letter “Overview of Counter Project”.
-*   Write a VHDL architecture for the top-level design, name the file, for example, “cntr_top_struct.vhd” and store it in the “vhdl” sub-folder of your project directory. Have a look at the previously described block diagram in order to understand how the interfaces of the sub-units need to be wired.
-*   Create a VHDL configuration if you like to, but this is completely optional.
-*   Create a VHDL entity/architecture pair (and an optional configuration) for the testbench of the top-level design, name the files, for example, “tb_cntr_top_.vhd” and “tb_cntr_top_sim.vhd” and store them in the “tb” sub-folder of your project directory.
-*   Write “do”-scripts to compile and simulate the top-level design as described in the document “Introduction to ModelSim-Intel FPGA Starter Edition” and store them in the “msim” sub-folder of your project directory.
-*   Simulate the top-level design using ModelSim and fix all bugs that you find. The top-level simulation is the most important type of simulation since it tests the complete design! Note, that bugs may appear even if the sub-blocks have been tested thoroughly, due to an incorrect wiring of the sub-components!
-*   If the top-level design was tested successfully, proceed with the last distance learning letter of the counter project named “Part 5: Synthesis & Implementation”.
+* Write a VHDL entity for the top-level design, name the file, for example, “cntr_top_.vhd” and store it in the “vhdl” sub-folder of your project directory. The entity ports can be found in the distance learning letter “Overview of Counter Project”.
+* Write a VHDL architecture for the top-level design, name the file, for example, “cntr_top_struct.vhd” and store it in the “vhdl” sub-folder of your project directory. Have a look at the previously described block diagram in order to understand how the interfaces of the sub-units need to be wired.
+* Create a VHDL configuration if you like to, but this is completely optional.
+* Create a VHDL entity/architecture pair (and an optional configuration) for the testbench of the top-level design, name the files, for example, “tb_cntr_top_.vhd” and “tb_cntr_top_sim.vhd” and store them in the “tb” sub-folder of your project directory.
+* Write “do”-scripts to compile and simulate the top-level design as described in the document “Introduction to ModelSim-Intel FPGA Starter Edition” and store them in the “msim” sub-folder of your project directory.
+* Simulate the top-level design using ModelSim and fix all bugs that you find. The top-level simulation is the most important type of simulation since it tests the complete design! Note, that bugs may appear even if the sub-blocks have been tested thoroughly, due to an incorrect wiring of the sub-components!
+* If the top-level design was tested successfully, proceed with the last distance learning letter of the counter project named “Part 5: Synthesis & Implementation”.

@@ -3,7 +3,9 @@ Certainly! Here is your text, reformatted for clarity and readability in Markdow
 ---
 
 # Lecture Notes  
+
 ## Specification of Counter Project  
+
 ### Part 1: Overview
 
 **Version:** BELN1.  
@@ -102,13 +104,14 @@ The top-level VHDL entity `cntr_top` contains all the I/Os as specified in Table
 
 **Description:**  
 The top-level entity `cntr_top` contains two sub-units: `io_ctrl` and `cntr`.  
+
 - Sub-unit **IO control** `io_ctrl` handles the I/O ports (with exception of the clock signal and the reset signal).
 - The second sub-unit **cntr** contains the implementation of the four decimal/hexadecimal/octal counters.
 - The 7-segment decoder/multiplexer (used to control and multiplex the four 7-segment digits) is located in the `io_ctrl` unit.
 
 ---
 
-### The IO control sub-unit has the following I/O ports:
+### The IO control sub-unit has the following I/O ports
 
 | Port Name      | Direction | Description                                 |
 |:--------------:|:---------:|:--------------------------------------------|
@@ -132,7 +135,7 @@ The `io_ctrl` unit implements a generic interface for the I/O hardware contained
 
 ---
 
-### The counter sub-unit has the following I/O ports:
+### The counter sub-unit has the following I/O ports
 
 | Port Name      | Direction | Description                                 |
 |:--------------:|:---------:|:--------------------------------------------|
@@ -152,7 +155,7 @@ The `cntr` sub-unit contains implementation of the decimal/hexadecimal/octal cou
 
 ---
 
-### The pinout for the FPGA is as follows (the missing pin numbers can be found in the board schematics and are also printed on the board):
+### The pinout for the FPGA is as follows (the missing pin numbers can be found in the board schematics and are also printed on the board)
 
 | Port Name         | Pin | Feature                |
 |:-----------------:|:---:|:----------------------|
@@ -183,16 +186,16 @@ The next steps in the project are as follows:
 Please prepare the following things for the presentation of your project in the lab:
 
 - **Demonstration of the functionality of the counter project on the FPGA board**
-    - The design must implement 100% of the specified functionality. Otherwise, you will obtain zero points!
+  - The design must implement 100% of the specified functionality. Otherwise, you will obtain zero points!
 - **Commented and compilable VHDL testbenches for your FPGA design:**
-    - If you cannot present a simulation at least at the top-level of your design, you will obtain zero points since this (i) reflects a poor design style and (ii) indicates that you have not really developed the design by yourself!
+  - If you cannot present a simulation at least at the top-level of your design, you will obtain zero points since this (i) reflects a poor design style and (ii) indicates that you have not really developed the design by yourself!
 - **Commented and synthesizable VHDL code of your FPGA design:**
-    - If your design is not compilable/synthesizable, you will obtain zero points.
-    - Note, that the number of points that can be obtained depends heavily on the quality of your code and project structure, e.g., the application of a clean and structured coding style, naming conventions for signals and files, quality of testbenches and simulation setup, number of warnings reported by AMD/Xilinx Vivado as well as the quality of comments in the source code (you will lose points for both undercommented and overcommented code – simply stick to what you have already learned in the previous units of the course).
-    - Finally, the grading of your project depends on how well you can answer the questions of the supervisors during the presentation. It is assumed that every student understands 100% of the source code and the design flow, even if the project was developed by a group of students.
-    - Note, that the supervisors will check if your implemented counter matches to the specification according to Table 2. If you have implemented a counter with a mode/frequency that is different to the definition shown in Table 2, your project cannot be accepted by the supervisors!
-    - Also note that, if two or more groups submit the same VHDL code, all of these students will be graded with zero points for the final project!
-    - There is, however, no need to create any PowerPoint slides for the project presentation.
+  - If your design is not compilable/synthesizable, you will obtain zero points.
+  - Note, that the number of points that can be obtained depends heavily on the quality of your code and project structure, e.g., the application of a clean and structured coding style, naming conventions for signals and files, quality of testbenches and simulation setup, number of warnings reported by AMD/Xilinx Vivado as well as the quality of comments in the source code (you will lose points for both undercommented and overcommented code – simply stick to what you have already learned in the previous units of the course).
+  - Finally, the grading of your project depends on how well you can answer the questions of the supervisors during the presentation. It is assumed that every student understands 100% of the source code and the design flow, even if the project was developed by a group of students.
+  - Note, that the supervisors will check if your implemented counter matches to the specification according to Table 2. If you have implemented a counter with a mode/frequency that is different to the definition shown in Table 2, your project cannot be accepted by the supervisors!
+  - Also note that, if two or more groups submit the same VHDL code, all of these students will be graded with zero points for the final project!
+  - There is, however, no need to create any PowerPoint slides for the project presentation.
 
 Please upload a ZIP file of your project (which should contain VHDL design and testbench files as well as ModelSim do-files only!) via the Moodle course website by the given deadline. Moreover, return the Basys3 board to the course supervisors. Note, that you cannot finish the course before you did not upload the design and return the board! Also note, that non-timely returning the board as well as not responding to emails or phone calls concerning board return can lead to legal actions and being excluded from the study program due to termination of your contract with the FH Technikum Wien!
 
