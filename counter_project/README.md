@@ -79,12 +79,12 @@ counter_project/
 
 ### Control Logic Truth Table
 
-| Clear | Run/Stop | Up | Down | Function |
-|:-----:|:--------:|:--:|:----:|:---------|
-| 1     | X        | X  | X    | Clear to 0000 |
-| 0     | 1        | 1  | X    | Count Up |
-| 0     | 1        | 0  | 1    | Count Down |
-| 0     | others   |    |      | Hold Value |
+| Clear | Run/Stop | Up  | Down | Function      |
+| :---: | :------: | :-: | :--: | :------------ |
+|   1   |    X     |  X  |  X   | Clear to 0000 |
+|   0   |    1     |  1  |  X   | Count Up      |
+|   0   |    1     |  0  |  1   | Count Down    |
+|   0   |  others  |     |      | Hold Value    |
 
 ## Switch Assignments
 
