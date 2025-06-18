@@ -13,10 +13,15 @@ This assignment involves implementing a **4-digit up/down counter** for the Digi
 
 ## Individual Specifications
 
-**IMPORTANT**: Your counter specifications depend on the **last two digits** of your matriculation number. Check **Table 2** in `Part_1_MEL_Prj_Counter_Overview.md` to determine:
+**Names of Students**: Summer Paulus, Matthias Brinskelle
+**Matriculation Number**: 52303789, 52303796
+**Lowest Last Two Digits**: 89
 
-- **Counter mode**: Decimal, Octal, or Hexadecimal
-- **Counting frequency**: 0.5 Hz, 1 Hz, 10 Hz, or 100 Hz
+According to **Table 2** in `Part_1_MEL_Prj_Counter_Overview.md`, your specifications are:
+
+- **Counter mode**: Octal (digits 0-7)
+- **Counting frequency**: 1 Hz for the least significant digit
+- **End value**: 7777 (instead of 9999 for decimal or FFFF for hexadecimal)
 
 ## Project Structure & Implementation Tasks
 
