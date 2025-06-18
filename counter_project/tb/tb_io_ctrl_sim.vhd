@@ -10,156 +10,154 @@
 -- File : tb_io_ctrl_sim.vhd                                               --
 -------------------------------------------------------------------------------
 
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.numeric_std.ALL;
+USE work.config_pkg.ALL;
 
-architecture sim of tb_io_ctrl is
+ARCHITECTURE sim OF tb_io_ctrl IS
 
   -- Component declaration
-  component io_ctrl
-    port (
-      clk_i          : in  std_logic;
-      reset_i        : in  std_logic;
-      cntr0_i        : in  std_logic_vector(2 downto 0);
-      cntr1_i        : in  std_logic_vector(2 downto 0);
-      cntr2_i        : in  std_logic_vector(2 downto 0);
-      cntr3_i        : in  std_logic_vector(2 downto 0);
-      led_i          : in  std_logic_vector(15 downto 0);
-      sw_i           : in  std_logic_vector(15 downto 0);
-      pb_i           : in  std_logic_vector(3 downto 0);
-      ss_o           : out std_logic_vector(7 downto 0);
-      ss_sel_o       : out std_logic_vector(3 downto 0);
-      led_o          : out std_logic_vector(15 downto 0);
-      swsync_o       : out std_logic_vector(15 downto 0);
-      pbsync_o       : out std_logic_vector(3 downto 0)
+  COMPONENT io_ctrl
+    PORT (
+      clk_i : IN STD_LOGIC;
+      reset_i : IN STD_LOGIC;
+      cntr0_i : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+      cntr1_i : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+      cntr2_i : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+      cntr3_i : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+      led_i : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      sw_i : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      pb_i : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+      ss_o : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+      ss_sel_o : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+      led_o : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+      swsync_o : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+      pbsync_o : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
     );
-  end component;
-  
-  -- Clock and reset
-  signal clk_tb         : std_logic := '0';
-  signal reset_tb       : std_logic := '1';
-  
-  -- Input signals
-  signal cntr0_tb       : std_logic_vector(2 downto 0) := "000";
-  signal cntr1_tb       : std_logic_vector(2 downto 0) := "001";
-  signal cntr2_tb       : std_logic_vector(2 downto 0) := "010";
-  signal cntr3_tb       : std_logic_vector(2 downto 0) := "011";
-  signal led_i_tb       : std_logic_vector(15 downto 0) := x"5555";
-  signal sw_tb          : std_logic_vector(15 downto 0) := x"0000";
-  signal pb_tb          : std_logic_vector(3 downto 0) := "0000";
-  
-  -- Output signals
-  signal ss_tb          : std_logic_vector(7 downto 0);
-  signal ss_sel_tb      : std_logic_vector(3 downto 0);
-  signal led_o_tb       : std_logic_vector(15 downto 0);
-  signal swsync_tb      : std_logic_vector(15 downto 0);
-  signal pbsync_tb      : std_logic_vector(3 downto 0);
-  
-  -- Clock period
-  constant CLK_PERIOD   : time := 10 ns; -- 100 MHz
+  END COMPONENT;
 
-begin
+  -- Clock and reset
+  SIGNAL clk_tb : STD_LOGIC := '0';
+  SIGNAL reset_tb : STD_LOGIC := '1';
+
+  -- Input signals
+  SIGNAL cntr0_tb : STD_LOGIC_VECTOR(2 DOWNTO 0) := "000";
+  SIGNAL cntr1_tb : STD_LOGIC_VECTOR(2 DOWNTO 0) := "001";
+  SIGNAL cntr2_tb : STD_LOGIC_VECTOR(2 DOWNTO 0) := "010";
+  SIGNAL cntr3_tb : STD_LOGIC_VECTOR(2 DOWNTO 0) := "011";
+  SIGNAL led_i_tb : STD_LOGIC_VECTOR(15 DOWNTO 0) := x"5555";
+  SIGNAL sw_tb : STD_LOGIC_VECTOR(15 DOWNTO 0) := x"0000";
+  SIGNAL pb_tb : STD_LOGIC_VECTOR(3 DOWNTO 0) := "0000";
+
+  -- Output signals
+  SIGNAL ss_tb : STD_LOGIC_VECTOR(7 DOWNTO 0);
+  SIGNAL ss_sel_tb : STD_LOGIC_VECTOR(3 DOWNTO 0);
+  SIGNAL led_o_tb : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  SIGNAL swsync_tb : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  SIGNAL pbsync_tb : STD_LOGIC_VECTOR(3 DOWNTO 0);
+
+BEGIN
 
   -- Device under test instantiation
-  dut: io_ctrl
-    port map (
-      clk_i      => clk_tb,
-      reset_i    => reset_tb,
-      cntr0_i    => cntr0_tb,
-      cntr1_i    => cntr1_tb,
-      cntr2_i    => cntr2_tb,
-      cntr3_i    => cntr3_tb,
-      led_i      => led_i_tb,
-      sw_i       => sw_tb,
-      pb_i       => pb_tb,
-      ss_o       => ss_tb,
-      ss_sel_o   => ss_sel_tb,
-      led_o      => led_o_tb,
-      swsync_o   => swsync_tb,
-      pbsync_o   => pbsync_tb
-    );
-  
+  dut : io_ctrl
+  PORT MAP(
+    clk_i => clk_tb,
+    reset_i => reset_tb,
+    cntr0_i => cntr0_tb,
+    cntr1_i => cntr1_tb,
+    cntr2_i => cntr2_tb,
+    cntr3_i => cntr3_tb,
+    led_i => led_i_tb,
+    sw_i => sw_tb,
+    pb_i => pb_tb,
+    ss_o => ss_tb,
+    ss_sel_o => ss_sel_tb,
+    led_o => led_o_tb,
+    swsync_o => swsync_tb,
+    pbsync_o => pbsync_tb
+  );
+
   -- Clock generation
-  clk_process: process
-  begin
-    while true loop
+  clk_process : PROCESS
+  BEGIN
+    WHILE true LOOP
       clk_tb <= '0';
-      wait for CLK_PERIOD/2;
+      WAIT FOR CLK_PERIOD/2;
       clk_tb <= '1';
-      wait for CLK_PERIOD/2;
-    end loop;
-  end process;
-  
+      WAIT FOR CLK_PERIOD/2;
+    END LOOP;
+  END PROCESS;
+
   -- Stimulus process
-  stim_process: process
-  begin
+  stim_process : PROCESS
+  BEGIN
     -- Initial reset
     reset_tb <= '1';
-    wait for 100 ns;
+    WAIT FOR 100 ns;
     reset_tb <= '0';
-    wait for 100 ns;
-    
-    report "Starting IO Control Unit Testbench";
-    
+    WAIT FOR 100 ns;
+
+    REPORT "Starting IO Control Unit Testbench";
+
     -- Test 1: Basic LED passthrough
-    report "Test 1: LED passthrough functionality";
+    REPORT "Test 1: LED passthrough functionality";
     led_i_tb <= x"AAAA";
-    wait for 1 us;
-    assert led_o_tb = x"AAAA" report "LED passthrough failed" severity error;
-    
+    WAIT FOR 1 us;
+    ASSERT led_o_tb = x"AAAA" REPORT "LED passthrough failed" SEVERITY error;
+
     -- Test 2: Switch debouncing
-    report "Test 2: Switch debouncing test";
+    REPORT "Test 2: Switch debouncing test";
     sw_tb <= x"0001";
-    wait for 50 us; -- Wait less than debounce time
+    WAIT FOR 50 us; -- Wait less than debounce time
     sw_tb <= x"0000";
-    wait for 50 us;
+    WAIT FOR 50 us;
     sw_tb <= x"0001";
-    wait for 2 ms; -- Wait longer than debounce time
-    assert swsync_tb = x"0001" report "Switch debouncing failed" severity error;
-    
+    WAIT FOR 2 ms; -- Wait longer than debounce time
+    ASSERT swsync_tb = x"0001" REPORT "Switch debouncing failed" SEVERITY error;
+
     -- Test 3: Push button debouncing
-    report "Test 3: Push button debouncing test";
+    REPORT "Test 3: Push button debouncing test";
     pb_tb <= "0001";
-    wait for 50 us;
+    WAIT FOR 50 us;
     pb_tb <= "0000";
-    wait for 50 us;
+    WAIT FOR 50 us;
     pb_tb <= "0001";
-    wait for 2 ms;
-    assert pbsync_tb = "0001" report "Push button debouncing failed" severity error;
-    
+    WAIT FOR 2 ms;
+    ASSERT pbsync_tb = "0001" REPORT "Push button debouncing failed" SEVERITY error;
+
     -- Test 4: 7-segment display multiplexing
-    report "Test 4: 7-segment display multiplexing";
+    REPORT "Test 4: 7-segment display multiplexing";
     cntr0_tb <= "000"; -- Display 0
     cntr1_tb <= "001"; -- Display 1
     cntr2_tb <= "010"; -- Display 2
     cntr3_tb <= "011"; -- Display 3
-    
+
     -- Wait for multiple display cycles and check each digit
-    wait for 5 ms; -- Allow multiple refresh cycles
-    
+    WAIT FOR 5 ms; -- Allow multiple refresh cycles
+
     -- Test 5: 7-segment decoder verification
-    report "Test 5: 7-segment decoder patterns";
+    REPORT "Test 5: 7-segment decoder patterns";
     cntr0_tb <= "111"; -- Display 7
     cntr1_tb <= "110"; -- Display 6
     cntr2_tb <= "101"; -- Display 5
     cntr3_tb <= "100"; -- Display 4
-    wait for 5 ms;
-    
-    -- Test 6: Reset functionality
-    report "Test 6: Reset functionality";
-    reset_tb <= '1';
-    wait for 100 ns;
-    reset_tb <= '0';
-    wait for 100 ns;
-    
-    -- Test 7: Invalid digit handling
-    report "Test 7: Invalid digit handling (should not occur in normal operation)";
-    -- Note: In normal operation, counter unit ensures only valid octal digits (0-7)
-    
-    report "IO Control Unit Testbench completed successfully";
-    wait;
-    
-  end process;
+    WAIT FOR 5 ms;
 
-end sim;
+    -- Test 6: Reset functionality
+    REPORT "Test 6: Reset functionality";
+    reset_tb <= '1';
+    WAIT FOR 100 ns;
+    reset_tb <= '0';
+    WAIT FOR 100 ns;
+
+    -- Test 7: Invalid digit handling
+    REPORT "Test 7: Invalid digit handling (should not occur in normal operation)";
+    -- Note: In normal operation, counter unit ensures only valid octal digits (0-7)
+
+    REPORT "IO Control Unit Testbench completed successfully";
+    WAIT;
+
+  END PROCESS;
+
+END sim;
