@@ -1,4 +1,3 @@
-
 # Lecture Notes
 
 ## Specification of Counter Project

@@ -1,7 +1,3 @@
-Certainly! Here is your text, reformatted for clarity and readability in Markdown, while preserving all original content and structure. Headings, tables, and lists are properly formatted.
-
----
-
 # Lecture Notes  
 
 ## Specification of Counter Project  
