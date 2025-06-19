@@ -4,7 +4,7 @@
 -- Description: Configuration file for IO control unit testbench.            --
 --                                                                           --
 -- Author : Summer Paulus, Matthias Brinskelle                               --
--- Date : 18.06.2025                                                         --
+-- Date : 19.06.2025                                                         --
 -- File : tb_io_ctrl_sim_cfg.vhd                                             --
 -------------------------------------------------------------------------------
 

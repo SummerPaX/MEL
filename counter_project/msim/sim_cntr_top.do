@@ -42,7 +42,7 @@ add wave -radix binary sim:/tb_cntr_top/dut/cntrhold_s
 
 add wave -divider "IO Control Internal"
 add wave -radix hex sim:/tb_cntr_top/dut/swsync_s
-add wave -radix binary sim:/tb_cntr_top/dut/i_io_ctrl/clk_1khz
+add wave -radix binary sim:/tb_cntr_top/dut/i_io_ctrl/clk_1khz_en
 add wave -radix unsigned sim:/tb_cntr_top/dut/i_io_ctrl/digit_sel
 
 add wave -divider "Counter Internal"

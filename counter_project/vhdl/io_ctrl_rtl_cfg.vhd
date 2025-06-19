@@ -5,7 +5,7 @@
 --              RTL architecture implementation.                             --
 --                                                                           --
 -- Author : Summer Paulus, Matthias Brinskelle                               --
--- Date : 18.06.2025                                                         --
+-- Date : 19.06.2025                                                         --
 -- File : io_ctrl_rtl_cfg.vhd                                                --
 -------------------------------------------------------------------------------
 

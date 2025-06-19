@@ -37,7 +37,7 @@ ENTITY io_ctrl IS
     ss_sel_o : OUT STD_LOGIC_VECTOR(3 DOWNTO 0); -- 7-segment display selection
     led_o : OUT STD_LOGIC_VECTOR(15 DOWNTO 0); -- 16 LEDs
 
-    -- Synchronized outputs (to internal logic)
+    -- Synchronized outputs (to FPGA internal logic)
     swsync_o : OUT STD_LOGIC_VECTOR(15 DOWNTO 0); -- Debounced switches
     pbsync_o : OUT STD_LOGIC_VECTOR(3 DOWNTO 0) -- Debounced push buttons
   );
