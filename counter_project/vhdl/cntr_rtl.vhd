@@ -43,12 +43,18 @@ ARCHITECTURE rtl OF cntr IS
 
 BEGIN
 
-  -- Priority control logic
-  -- Priority: Clear > Up/Down > Hold
+  ------------------------------------------------
+  -- Clear |   Hold   | Up | Down | Function
+  --   1   |    X     | X  |  X   | Clear
+  --   0   |    0     | 1  |  X   | Count Up  
+  --   0   |    0     | 0  |  1   | Count Down
+  --   0   | others   |    |      | Hold Value
+  ------------------------------------------------
+
   clear_active <= cntrclear_i;
-  count_up <= (NOT cntrclear_i) AND cntrup_i AND (NOT cntrdown_i);
-  count_down <= (NOT cntrclear_i) AND (NOT cntrup_i) AND cntrdown_i;
-  hold_count <= (NOT cntrclear_i) AND cntrhold_i AND (NOT cntrup_i) AND (NOT cntrdown_i);
+  count_up <= (NOT cntrclear_i) AND (NOT cntrhold_i) AND cntrup_i;
+  count_down <= (NOT cntrclear_i) AND (NOT cntrhold_i) AND (NOT cntrup_i) AND cntrdown_i;
+  hold_count <= (NOT cntrclear_i) AND NOT (cntrup_i OR cntrdown_i);
 
   -- Clock divider for 1 Hz counting frequency
   proc_clk_div : PROCESS (clk_i, reset_i)
@@ -68,20 +74,14 @@ BEGIN
   END PROCESS proc_clk_div;
 
   -- Carry logic for counting up
-  carry0 <= '1' WHEN digit0_reg = "111" ELSE
-    '0'; -- Carry when digit reaches 7
-  carry1 <= carry0 WHEN digit1_reg = "111" ELSE
-    '0';
-  carry2 <= carry1 WHEN digit2_reg = "111" ELSE
-    '0';
+  carry0 <= '1' WHEN digit0_reg = "111" ELSE '0'; -- Carry when digit reaches 7
+  carry1 <= carry0 WHEN digit1_reg = "111" ELSE '0';
+  carry2 <= carry1 WHEN digit2_reg = "111" ELSE '0';
 
   -- Borrow logic for counting down  
-  borrow0 <= '1' WHEN digit0_reg = "000" ELSE
-    '0'; -- Borrow when digit reaches 0
-  borrow1 <= borrow0 WHEN digit1_reg = "000" ELSE
-    '0';
-  borrow2 <= borrow1 WHEN digit2_reg = "000" ELSE
-    '0';
+  borrow0 <= '1' WHEN digit0_reg = "000" ELSE '0'; -- Borrow when digit reaches 0
+  borrow1 <= borrow0 WHEN digit1_reg = "000" ELSE '0';
+  borrow2 <= borrow1 WHEN digit2_reg = "000" ELSE '0';
 
   -- Counter logic for digit 0 (LSB)
   proc_counter0 : PROCESS (clk_i, reset_i)
@@ -192,5 +192,4 @@ BEGIN
   cntr1_o <= STD_LOGIC_VECTOR(digit1_reg);
   cntr2_o <= STD_LOGIC_VECTOR(digit2_reg);
   cntr3_o <= STD_LOGIC_VECTOR(digit3_reg);
-
 END rtl;

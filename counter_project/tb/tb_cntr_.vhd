@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
 -- MEL Counter Project - Counter Unit Testbench Entity                       --
 --                                                                           --
--- Description: Testbench entity for the counter unit verification.          --
---              Tests counting functionality, priority control, and          --
---              wraparound behavior for octal counter.                       --
+-- Description: Testbench entity declaration for the counter unit.           --
+--              Tests all counter functionality including up/down counting,  --
+--              clear, hold, and wraparound behavior.                        --
 --                                                                           --
 -- Author : Summer Paulus, Matthias Brinskelle                               --
--- Date : 18.06.2025                                                         --
+-- Date : 19.06.2025                                                         --
 -- File : tb_cntr_.vhd                                                       --
 -------------------------------------------------------------------------------
 

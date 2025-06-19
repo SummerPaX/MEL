@@ -1,15 +1,14 @@
 -------------------------------------------------------------------------------
--- MEL Counter Project - Counter Unit Testbench Configuration                --
+-- MEL Counter Project - Counter Unit Testbench Configuration               --
 --                                                                           --
--- Description: Configuration file for counter unit testbench.               --
+-- Description: Configuration file for the counter unit testbench.           --
+--              Links the testbench entity with its simulation architecture  --
+--              and specifies component bindings.                            --
 --                                                                           --
 -- Author : Summer Paulus, Matthias Brinskelle                               --
--- Date : 18.06.2025                                                         --
--- File : tb_cntr_sim_cfg.vhd                                                --
+-- Date : 19.06.2025                                                         --
+-- File : tb_cntr_sim_cfg.vhd                                               --
 -------------------------------------------------------------------------------
-
-LIBRARY IEEE;
-USE IEEE.std_logic_1164.ALL;
 
 CONFIGURATION tb_cntr_sim_cfg OF tb_cntr IS
   FOR sim

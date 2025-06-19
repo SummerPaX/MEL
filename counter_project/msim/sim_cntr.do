@@ -26,7 +26,7 @@ add wave -radix unsigned sim:/tb_cntr/cntr0_tb
 add wave -radix unsigned sim:/tb_cntr/cntr1_tb
 add wave -radix unsigned sim:/tb_cntr/cntr2_tb
 add wave -radix unsigned sim:/tb_cntr/cntr3_tb
-add wave -radix hex sim:/tb_cntr/counter_value
+add wave sim:/tb_cntr/counter_string
 
 add wave -divider "Internal Signals"
 add wave -radix binary sim:/tb_cntr/dut/count_enable
@@ -34,16 +34,22 @@ add wave -radix unsigned sim:/tb_cntr/dut/clk_div_cnt
 add wave -radix binary sim:/tb_cntr/dut/clear_active
 add wave -radix binary sim:/tb_cntr/dut/count_up
 add wave -radix binary sim:/tb_cntr/dut/count_down
+add wave -radix binary sim:/tb_cntr/dut/hold_count
+
+add wave -divider "Carry/Borrow Signals"
 add wave -radix binary sim:/tb_cntr/dut/carry0
 add wave -radix binary sim:/tb_cntr/dut/carry1
 add wave -radix binary sim:/tb_cntr/dut/carry2
+add wave -radix binary sim:/tb_cntr/dut/borrow0
+add wave -radix binary sim:/tb_cntr/dut/borrow1
+add wave -radix binary sim:/tb_cntr/dut/borrow2
 
 # Configure wave window
 configure wave -timelineunits ns
-WaveRestoreZoom {0 ns} {20 us}
+WaveRestoreZoom {0 ns} {1210 us}
 
 # Run simulation
 echo "Starting Counter Unit simulation..."
-run 20 us
+run 1200 us
 
 echo "Counter Unit simulation completed."
