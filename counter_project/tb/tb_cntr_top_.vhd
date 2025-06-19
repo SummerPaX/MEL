@@ -6,7 +6,7 @@
 --              counter units with realistic switch scenarios.               --
 --                                                                           --
 -- Author : Summer Paulus, Matthias Brinskelle                               --
--- Date : 18.06.2025                                                         --
+-- Date : 19.06.2025                                                         --
 -- File : tb_cntr_top_.vhd                                                   --
 -------------------------------------------------------------------------------
 
@@ -14,5 +14,4 @@ LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 
 ENTITY tb_cntr_top IS
-  -- Testbench has no ports
 END tb_cntr_top;
